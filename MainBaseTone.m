@@ -19,6 +19,8 @@ new_wector = get_norm_vektor(TestSignal2,sampleSize);%returns an array of multip
 %выделяем огибающую для определеня частоты основного тона
 N = wmaxlev(sampleSize,'sym8');
 NN=ctrl_Select_Level_And_Decom(N,[100 0 0 0 0 0 0]);%выделяю огибающие  
+%  WaveName =  ToneDeNoise(input_data,NN,WaveName)
+% ArrayConvercion = ctrl_Component_Weiv_Tone(OutputArray,L,NumbComponent,prozent,Correction)
 % WaveRes= ToneDeNoise(new_wector,NN,'sym8');
 res_val = ctrl_sigSectorWitoutFFT(new_wector,sampleSize);%return each plots size sampleSize
 
