@@ -1,4 +1,6 @@
 function  [acor,sizeStrob,sizeEndStrob,iterationStrob]=ctrl_autocorrHalfPower(WaveRes)
+%this function returned us autocorrelation of signal and size of half power
+%cor-functions.
 [acor,lag] = xcorr(WaveRes,WaveRes);%correlations
 %here we consider power of signal
 acorP=acor.^2;%power of  cor function
